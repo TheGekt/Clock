@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Clock</title>
+    <style>
+        #clock{
+            color: coral;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <div id="clock">Clock</div>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script>
+         
+            function fclock(){
+                var d = new Date();
+                $('#clock').text(d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds());
+            }
+         
+            
+            $(document).ready(
+                function() {
+                    $('#clock').text('Start clock');
+                    setInterval(fclock, 1000);
+                } 
+                );
+         
+     </script>
+</body>
+
+
+
+</html>
